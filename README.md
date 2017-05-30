@@ -1,7 +1,7 @@
 # Docker Glassfish 2.1.1
 
-[![Docker Stars](https://img.shields.io/docker/stars/jfloff/docker-glassfish-2.1.1.svg)][hub]
-[![Docker Pulls](https://img.shields.io/docker/pulls/jfloff/docker-glassfish-2.1.1.svg)][hub]
+[![Docker Stars](https://img.shields.io/docker/stars/jfloff/glassfish-2.1.1.svg)][hub]
+[![Docker Pulls](https://img.shields.io/docker/pulls/jfloff/glassfish-2.1.1.svg)][hub]
 
 [hub]: https://hub.docker.com/r/jfloff/docker-glassfish-2.1.1/
 
