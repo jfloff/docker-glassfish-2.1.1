@@ -7,6 +7,12 @@
 
 Docker image for projects that rely on **[Glassfish](https://javaee.github.io/glassfish/) 2.1.1**. Why such an old version? Well, don't ask me - [I just need it](https://github.com/jfloff/docker-mrubis). :unamused:
 
+## Supported tags
+* **`7`,`latest` ([7/Dockerfile](https://github.com/jfloff/docker-glassfish-2.1.1/blob/master/7/Dockerfile))** (@robotfood)
+* **`6` ([6/Dockerfile](https://github.com/jfloff/docker-glassfish-2.1.1/blob/master/6/Dockerfile))** (@jfloff)
+
+
+
 First, finding this version was already hard! The oldest release on the [official repo](https://github.com/javaee/glassfish/releases) is 3.0. Thanks to @d10xa and his [repo](https://github.com/d10xa/docker-glassfish-2.1.1) I was able to find a download link. Second, due to some JDK version problems, I had to manually install a specific JDK version (`6u31`) from Oracle's binary.
 
 The good news is that since Glassfish comes with an old Apache Ant version, we avoid installing a newer version of Ant that would require Java 7 or 8. Moreover, we avoid any possible compatability problems with legacy code.
@@ -22,14 +28,14 @@ As usual in Glassfish you can visit its homepage at `localhost:8080` or `localho
 ### Usage
 If you are not familiar with Docker, or just forget the commands all the time like me, here is a resumé:
 ```
-# build from this repo's Dockerfile
-docker build --rm -t jfloff/glassfish-2.1.1 .
-
 # run linking to the admin panel and main page
-docker run --rm -p 4848:4848 -p 8080:800 -ti jfloff/glassfish-2.1.1
+docker run --rm -p 4848:4848 -p 8080:800 -ti jfloff/glassfish-2.1.1:latest
 
 # Use as base in another Dockerfile
-FROM jfloff/glassfish-2.1.1
+FROM jfloff/glassfish-2.1.1:6
+
+# build from this repo's Dockerfile
+docker build --rm -t jfloff/glassfish-2.1.1:dev .
 ```
 
 ### Contribute
