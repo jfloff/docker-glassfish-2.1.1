@@ -29,7 +29,7 @@ As usual in Glassfish you can visit its homepage at `localhost:8080` or `localho
 If you are not familiar with Docker, or just forget the commands all the time like me, here is a resumé:
 ```
 # run linking to the admin panel and main page
-docker run --rm -p 4848:4848 -p 8080:800 -ti jfloff/glassfish-2.1.1:latest
+docker run --rm -p 4848:4848 -p 8080:8080 -ti jfloff/glassfish-2.1.1:latest
 
 # Use as base in another Dockerfile
 FROM jfloff/glassfish-2.1.1:6
